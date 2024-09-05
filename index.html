@@ -1,0 +1,1002 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>VidDraft - Effortlessly Take Timestamped Video Notes & Boost Productivity</title>
+        <meta name="description" content="VidDraft lets you take timestamped notes from YouTube videos, search and organize them easily, and improve your workflow. Pay once, use forever!" />
+        <link
+            rel="shortcut icon"
+            href="./assets/logo/viddraft-new.png"
+            type="image/x-icon"
+        />
+
+        <!-- Open Graph / Facebook -->
+        <meta property="og:title" content="VidDraft - Perfect Your Video Notes" />
+        <meta property="og:description" content="VidDraft makes taking timestamped notes from YouTube videos easy, allowing you to save and organize your notes effortlessly. Save time and boost productivity!" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://yourwebsite.com" />
+        <!--Replace with the current website url-->
+        <meta property="og:image" content="./assets/images/home/viddraft-banner.png" />
+        <meta property="og:site_name" content="VidDraft" />
+
+        <!-- Twitter Card Data -->
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="VidDraft - Organize & Timestamp Video Notes Efficiently" />
+        <meta name="twitter:description" content="VidDraft is the tool you need to organize your YouTube video notes with timestamps and boost your productivity. Perfect for students, researchers, and professionals!" />
+        <meta name="twitter:image" content="./assets/images/home/viddraft-twitter-image.png" />
+        
+        <!-- Keywords for SEO -->
+        <meta name="keywords" content="video note-taking tool, techiral, timestamped video notes, YouTube video notes, organize video notes, productivity tools, time-saving tool, study tool, research tool, video bookmarking, YouTube timestamp notes, VidDraft app" />
+        
+        <!-- Canonical Link -->
+        <link rel="canonical" href="https://yourwebsite.com" />        
+
+        <!-- <link rel="stylesheet" href="../../tailwind-css/tailwind-runtime.css" /> -->
+        <link rel="stylesheet" href="./css/tailwind-build.css">
+        <link rel="stylesheet" href="css/index.css" />
+
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css"
+            integrity="sha512-dPXYcDub/aeb08c63jRq/k6GaKccl256JQy/AnOq7CAnEZ9FzSL9wSbcZkMp4R26vBsMLFYH4kQ67/bbV8XaCQ=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+    </head>
+    <body
+        class="tw-flex tw-min-h-[100vh] tw-flex-col tw-bg-black tw-text-white"
+    >
+        <header
+            class="tw-max-w-lg:tw-px-4 tw-max-w-lg:tw-mr-auto tw-absolute tw-top-0 tw-z-20 tw-flex tw-h-[60px] tw-w-full tw-bg-opacity-0 tw-px-[5%] lg:tw-justify-around"
+        >
+            <a class="tw-h-[50px] tw-w-[50px] tw-p-[4px]" href="">
+                <img
+                    src="./assets/logo/viddraft-bg (1).png"
+                    alt="logo"
+                    class="tw-object tw-h-full tw-w-full"
+                />
+            </a>
+            <div
+                class="collapsible-header animated-collapse max-lg:tw-shadow-md"
+                id="collapsed-header-items"
+            >
+                <div
+                    class="tw-flex tw-h-full tw-w-max tw-gap-5 tw-text-base max-lg:tw-mt-[30px] max-lg:tw-flex-col max-lg:tw-place-items-end max-lg:tw-gap-5 lg:tw-mx-auto lg:tw-place-items-center"
+                >
+                    <a class="header-links" href="#about-us"> About us </a>
+                    <a class="header-links" href="#pricing"> Pricing </a>
+                    <a class="header-links" href="#solutions"> Solutions </a>
+                    <a class="header-links" href="#features"> Features </a>
+                    <a class="header-links" href="#company"> Company </a>
+                </div>
+                <div
+                    class="tw-mx-4 tw-flex tw-place-items-center tw-gap-[20px] tw-text-base max-md:tw-w-full max-md:tw-flex-col max-md:tw-place-content-center"
+                >
+                    <a
+                        href="https://www.paypal.com/ncp/payment/AU887D4BJRS9L"
+                        aria-label="signup"
+                        class="tw-rounded-full tw-bg-white tw-px-3 tw-py-2 tw-text-black tw-transition-transform tw-duration-[0.3s] hover:tw-translate-x-2"
+                    >
+                        <span>Get started</span>
+                        <i class="bi bi-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+            <button
+                class="bi bi-list tw-absolute tw-right-3 tw-top-3 tw-z-50 tw-text-3xl tw-text-white lg:tw-hidden"
+                onclick="toggleHeader()"
+                aria-label="menu"
+                id="collapse-btn"
+            ></button>
+        </header>
+
+        <section
+            class="hero-section tw-relative tw-flex tw-min-h-[100vh] tw-w-full tw-max-w-[100vw] tw-flex-col tw-overflow-hidden max-md:tw-mt-[50px]"
+            id="hero-section"
+        >
+            <div
+                class="tw-flex tw-h-full tw-min-h-[100vh] tw-w-full tw-flex-col tw-place-content-center tw-gap-6 tw-p-[5%] max-xl:tw-place-items-center max-lg:tw-p-4"
+            >
+                <div
+                    class="tw-flex tw-flex-col tw-place-content-center tw-items-center"
+                >
+                    <div
+                        class="reveal-up gradient-text tw-text-center tw-text-5xl tw-font-semibold tw-uppercase tw-leading-[80px] max-lg:tw-text-4xl max-md:tw-leading-snug"
+                    >
+                        <span class="">Perfect Your Video Notes</span>
+                    </div>
+                    <div
+                        class="reveal-up tw-mt-0 tw-max-w-[1000000px] tw-p-0
+                         tw-text-center tw-text-gray-300 max-lg:tw-max-w-full"
+                    >
+                        <b>Effortlessly Manage and Organize Your Video Learning</b> Search YouTube, take timestamped notes,
+                        <br>
+                        and organize them all in one seamless interface.
+                    </div>
+
+                    <div
+                        class="reveal-up tw-mt-10 tw-flex tw-place-items-center tw-gap-4"
+                    >
+                        <a
+                            class="btn tw-bg-[#7e22ce85] tw-shadow-lg tw-shadow-primary tw-transition-transform tw-duration-[0.3s] hover:tw-scale-x-[1.03]"
+                            href="https://www.paypal.com/ncp/payment/AU887D4BJRS9L"
+                        >
+                            Get started
+                        </a>
+                        <a
+                            class="btn tw-flex tw-gap-2 !tw-bg-black !tw-text-white tw-transition-colors tw-duration-[0.3s] hover:!tw-bg-white hover:!tw-text-black"
+                            href="#about-us"
+                        >
+                            <i class="bi bi-play-circle-fill"></i>
+                            <span>Learn more</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div
+                    class="reveal-up tw-relative tw-mt-8 tw-flex tw-w-full tw-place-content-center tw-place-items-center"
+                    id="dashboard-container"
+                >
+                    <div
+                        class="tw-relative tw-max-w-[80%] tw-overflow-hidden tw-rounded-xl tw-bg-transparent max-md:tw-max-w-full"
+                        id="dashboard"
+                    >
+                        <img
+                            src="./assets/images/home/dashboard.png"
+                            alt="dashboard"
+                            class="tw-h-full tw-w-full tw-object-cover tw-opacity-90 max-lg:tw-object-contain"
+                        />
+                    </div>
+
+                    <div
+                        class="hero-img-bg-grad tw-absolute tw-left-[20%] tw-top-5 tw-h-[200px] tw-w-[200px]"
+                    ></div>
+                </div>
+            </div>
+        </section>
+
+        <section
+            class="tw-relative tw-flex tw-w-full tw-max-w-[100vw] tw-flex-col tw-place-content-center tw-place-items-center tw-overflow-hidden tw-p-8"
+        >
+            <h2 class="reveal-up tw-text-3xl max-md:tw-text-xl">
+                <b>Trusted by Brands You Love</b>
+            </h2>
+
+            <div class="reveal-up carousel-container">
+                <div
+                    class="carousel lg:w-place-content-center tw-mt-6 tw-flex tw-w-full tw-gap-5 max-md:tw-gap-2"
+                >
+                    <!-- add the brands using your app  -->
+                    <div class="carousel-img tw-h-[30px] tw-w-[150px]">
+                        <img
+                            src="./assets/images/brand-logos/google.svg"
+                            alt="Google"
+                            class="tw-h-full tw-w-full tw-object-contain tw-grayscale tw-transition-colors hover:tw-grayscale-0"
+                            srcset=""
+                        />
+                    </div>
+                    <div class="carousel-img tw-h-[30px] tw-w-[150px]">
+                        <img
+                            src="./assets/images/brand-logos/microsoft.svg"
+                            alt="Microsoft"
+                            class="tw-h-full tw-w-full tw-object-contain tw-grayscale tw-transition-colors hover:tw-grayscale-0"
+                            srcset=""
+                        />
+                    </div>
+                    <div class="carousel-img tw-h-[30px] tw-w-[150px]">
+                        <img
+                            src="./assets/images/brand-logos/adobe.svg"
+                            alt="Adobe"
+                            class="tw-h-full tw-w-full tw-object-contain tw-grayscale tw-transition-colors hover:tw-grayscale-0"
+                            srcset=""
+                        />
+                    </div>
+                    <div class="carousel-img tw-h-[30px] tw-w-[150px]">
+                        <img
+                            src="./assets/images/brand-logos/airbnb.svg"
+                            alt="Adobe"
+                            class="tw-h-full tw-w-full tw-object-contain tw-grayscale tw-transition-colors hover:tw-grayscale-0"
+                            srcset=""
+                        />
+                    </div>
+                    <div class="carousel-img tw-h-[30px] tw-w-[150px]">
+                        <img
+                            src="./assets/images/brand-logos/stripe.svg"
+                            alt="Adobe"
+                            class="tw-h-full tw-w-full tw-object-contain tw-grayscale tw-transition-colors hover:tw-grayscale-0"
+                            srcset=""
+                        />
+                    </div>
+                    <div class="carousel-img tw-h-[30px] tw-w-[150px]">
+                        <img
+                            src="./assets/images/brand-logos/reddit.svg"
+                            alt="Adobe"
+                            class="tw-h-full tw-w-full tw-object-contain tw-grayscale tw-transition-colors hover:tw-grayscale-0"
+                            srcset=""
+                        />
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section
+            class="tw-relative tw-flex tw-w-full tw-max-w-[100vw] tw-flex-col tw-place-content-center tw-place-items-center tw-overflow-hidden tw-p-6"
+            id="about-us"
+            >
+            <div
+                class="tw-mt-8 tw-flex tw-flex-col tw-place-items-center tw-gap-5"
+            >
+                <div
+                    class="reveal-up tw-mt-5 tw-flex tw-flex-col tw-gap-3 tw-text-center"
+                >
+                    <h2
+                        class="tw-text-4xl tw-font-medium tw-text-gray-200 max-md:tw-text-3xl"
+                    >
+                    <b>Why Choose VidDraft?</b>
+                    </h2>
+                </div>
+                <div
+                    class="tw-mt-6 tw-flex tw-max-w-[80%] tw-flex-wrap tw-place-content-center tw-gap-8 max-lg:tw-flex-col"
+                >
+                    <div
+                        class="reveal-up tw-flex tw-h-[400px] tw-w-[450px] tw-flex-col tw-gap-3 tw-text-center max-md:tw-w-[320px]"
+                    >
+                        <div
+                            class="border-gradient tw-h-[200px] tw-w-full tw-overflow-hidden max-md:tw-h-[150px]"
+                        >
+                            <div
+                                class="tw-flex tw-h-full tw-w-full tw-place-content-center tw-place-items-end tw-p-2"
+                            >
+                                <i
+                                    class="bi bi-rocket-takeoff-fill tw-text-7xl tw-text-gray-200 max-md:tw-text-5xl"
+                                ></i>
+                            </div>
+                        </div>
+                        <div class="tw-flex tw-flex-col tw-gap-4 tw-p-2">
+                            <h3
+                                class="tw-mt-8 tw-text-2xl tw-font-normal max-md:tw-text-xl"
+                            >
+                            Maximize Your Learning Efficiency
+                            </h3>
+                            <div class="tw-text-gray-300">
+                                No more rewinding or losing key points. VidDraft helps you capture and organize important moments from any video, saving you hours every week.
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="reveal-up tw-flex tw-h-[400px] tw-w-[450px] tw-flex-col tw-gap-3 tw-text-center max-md:tw-w-[320px]"
+                    >
+                        <div
+                            class="border-gradient tw-h-[200px] tw-w-full tw-overflow-hidden max-md:tw-text-[150px]"
+                        >
+                            <div
+                                class="tw-flex tw-h-full tw-w-full tw-place-content-center tw-place-items-end tw-p-2"
+                            >
+                                <i
+                                    class="bi bi-layout-sidebar-inset tw-text-7xl tw-text-gray-200 max-md:tw-text-5xl"
+                                ></i>
+                            </div>
+                        </div>
+                        <div class="tw-flex tw-flex-col tw-gap-4 tw-p-2">
+                            <h3
+                                class="tw-mt-8 tw-text-2xl tw-font-normal max-md:tw-text-xl"
+                            >
+                            Intuitive and User-Friendly Interface
+                            </h3>
+                            <div class="tw-text-gray-300">
+                                Whether you're a newbie or a seasoned pro, VidDraft is built for simplicity and ease of use. Take detailed, timestamped notes with minimal effort.
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="reveal-up tw-flex tw-h-[400px] tw-w-[450px] tw-flex-col tw-gap-3 tw-text-center max-md:tw-w-[320px]"
+                    >
+                        <div
+                            class="border-gradient tw-h-[200px] tw-w-full tw-overflow-hidden max-md:tw-h-[150px]"
+                        >
+                            <div
+                                class="tw-flex tw-h-full tw-w-full tw-place-content-center tw-place-items-end tw-p-2"
+                            >
+                                <i
+                                    class="bi bi-lightning-charge-fill tw-text-7xl tw-text-gray-200 max-md:tw-text-5xl"
+                                ></i>
+                            </div>
+                        </div>
+                        <div class="tw-flex tw-flex-col tw-gap-4 tw-p-2">
+                            <h3
+                                class="tw-mt-8 tw-text-2xl tw-font-normal max-md:tw-text-xl"
+                            >
+                            Streamline Your Workflow
+                            </h3>
+                            <div class="tw-text-gray-300">
+                                Quickly find and reference key moments in videos. VidDraft accelerates your research and development, making your workflow faster and more efficient.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section
+            class="tw-relative tw-flex tw-min-h-[80vh] tw-w-full tw-max-w-[100vw] tw-flex-col tw-place-content-center tw-place-items-center tw-overflow-hidden tw-p-6"
+            id="features"
+        >
+            <div
+                class="tw-mt-8 tw-flex tw-flex-col tw-place-items-center tw-gap-5"
+            >
+                <div
+                    class="reveal-up tw-mt-5 tw-flex tw-flex-col tw-gap-3 tw-text-center"
+                >
+                    <h2
+                        class="tw-text-4xl tw-font-medium tw-text-gray-200 max-md:tw-text-2xl"
+                    >
+                        Features You'll Love
+                    </h2>
+                </div>
+                <div
+                    class="tw-mt-6 tw-flex tw-max-w-[80%] tw-flex-wrap tw-place-content-center tw-gap-8 max-lg:tw-flex-col"
+                >
+                    <div
+                        class="reveal-up tw-flex tw-h-[200px] tw-w-[450px] tw-gap-8 tw-rounded-xl tw-border-[1px] tw-border-outlineColor tw-bg-secondary tw-p-8 max-md:tw-w-[320px]"
+                    >
+                        <div class="tw-text-4xl max-md:tw-text-2xl">
+                            <i class="bi bi-globe"></i>
+                        </div>
+
+                        <div class="tw-flex tw-flex-col tw-gap-4">
+                            <h3 class="tw-text-2xl max-md:tw-text-xl">
+                                YouTube Integration
+                            </h3>
+                            <p class="tw-text-gray-300 max-md:tw-text-sm">
+                                Search and play YouTube videos directly in the app using video IDs. No need to switch between multiple tabs or apps.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div
+                        class="reveal-up tw-flex tw-h-[200px] tw-w-[450px] tw-gap-8 tw-rounded-xl tw-border-[1px] tw-border-outlineColor tw-bg-secondary tw-p-8 max-md:tw-w-[320px]"
+                    >
+                        <div class="tw-text-4xl max-md:tw-text-2xl">
+                            <i class="bi bi-bar-chart-fill"></i>
+                        </div>
+
+                        <div class="tw-flex tw-flex-col tw-gap-4">
+                            <h3 class="tw-text-2xl max-md:tw-text-xl">
+                                Timestamped Note Taking
+                            </h3>
+                            <p class="tw-text-gray-300 max-md:tw-text-sm">
+                                Capture notes while watching videos, with automatic timestamps for easy reference later.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div
+                        class="reveal-up tw-flex tw-h-[200px] tw-w-[450px] tw-gap-8 tw-rounded-xl tw-border-[1px] tw-border-outlineColor tw-bg-secondary tw-p-8 max-md:tw-w-[320px]"
+                    >
+                        <div class="tw-text-4xl max-md:tw-text-2xl">
+                            <i class="bi bi-cloud-fill"></i>
+                        </div>
+
+                        <div class="tw-flex tw-flex-col tw-gap-4">
+                            <h3 class="tw-text-2xl max-md:tw-text-xl">
+                                Organized Storage
+                            </h3>
+                            <p class="tw-text-gray-300 max-md:tw-text-sm">
+                                Categorize and store your notes by video. Keep everything organized and easily accessible whenever you need it.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div
+                        class="reveal-up tw-flex tw-h-[200px] tw-w-[450px] tw-gap-8 tw-rounded-xl tw-border-[1px] tw-border-outlineColor tw-bg-secondary tw-p-8 max-md:tw-w-[320px]"
+                    >
+                        <div class="tw-text-4xl max-md:tw-text-2xl">
+                            <i class="bi bi-fingerprint"></i>
+                        </div>
+
+                        <div class="tw-flex tw-flex-col tw-gap-4">
+                            <h3 class="tw-text-2xl max-md:tw-text-xl">
+                                Edit Notes Anytime
+                            </h3>
+                            <p class="tw-text-gray-300 max-md:tw-text-sm">
+                                Make changes to your notes at any time. Keep your insights fresh and relevant with easy editing tools.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section
+            class="tw-relative tw-flex tw-min-h-[80vh] tw-w-full tw-max-w-[100vw] tw-flex-col tw-place-content-center tw-place-items-center tw-overflow-hidden tw-p-6"
+            id="solutions"
+        >   
+        
+            <div
+                class="reveal-up tw-flex tw-min-h-[60vh] tw-place-content-center tw-place-items-center tw-gap-[10%] max-lg:tw-flex-col max-lg:tw-gap-10"
+            >
+                <div class="tw-flex">
+                    <div
+                        class="tw-max-h-[650px] tw-max-w-[850px] tw-overflow-hidden tw-rounded-lg tw-shadow-lg tw-shadow-[rgba(170,49,233,0.44021358543417366)]"
+                    >
+                        <img
+                            src="./assets/images/home/dash.png"
+                            alt="coding"
+                            class="tw-h-full tw-w-full tw-object-cover"
+                        />
+                    </div>
+                </div>
+                <div
+                    class="tw-mt-6 tw-flex tw-max-w-[450px] tw-flex-col tw-gap-4"
+                >
+                    <h3 class="tw-text-4xl tw-font-medium max-md:tw-text-2xl">
+                        How It Works?
+                    </h3>
+
+                    <div class="tw-mt-4 tw-flex tw-flex-col tw-gap-3">
+                        <h4 class="tw-text-xl tw-font-medium">
+                            <i class="bi bi-check-all !tw-text-2xl"></i>
+                            Search Videos
+                        </h4>
+                        <span
+                            class="tw-text-lg tw-text-gray-300 max-md:tw-text-base"
+                        >
+                        Find YouTube videos by entering video IDs directly into the search bar. Everything you need is right in one place.
+                        </span>
+                    </div>
+                    <div class="tw-mt-4 tw-flex tw-flex-col tw-gap-3">
+                        <h4 class="tw-text-xl tw-font-medium">
+                            <i class="bi bi-check-all !tw-text-2xl"></i>
+                            Watch and Take Notes
+                        </h4>
+                        <span
+                            class="tw-text-lg tw-text-gray-300 max-md:tw-text-base"
+                        >
+                        Play videos and take notes simultaneously. Your notes are automatically timestamped for quick reference.
+                        </span>
+                    </div>
+                    <div class="tw-mt-4 tw-flex tw-flex-col tw-gap-3">
+                        <h4 class="tw-text-xl tw-font-medium">
+                            <i class="bi bi-check-all !tw-text-2xl"></i>
+                            Manage Your Notes
+                        </h4>
+                        <span
+                            class="tw-text-lg tw-text-gray-300 max-md:tw-text-base"
+                        >
+                        Easily view, edit, and manage your notes. Keep your ideas organized and accessible at all times.
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section
+            class="tw-mt-5 tw-flex tw-min-h-[80vh] tw-w-full tw-flex-col tw-place-content-center tw-place-items-center tw-p-[2%]"
+        >
+            <h3
+                class="tw-text-4xl tw-font-medium tw-text-gray-200 max-md:tw-text-2xl"
+            >
+            <b>What Our Users Say</b>
+            </h3>
+            <!-- Testimonials -->
+            <div
+                class="tw-mt-8 tw-gap-10 tw-space-y-8 max-md:tw-columns-1 lg:tw-columns-2 xl:tw-columns-3"
+            >
+                <div
+                    class="reveal-up tw-flex tw-h-fit tw-w-[350px] tw-break-inside-avoid tw-flex-col tw-gap-4 tw-rounded-lg tw-border-[1px] tw-border-outlineColor tw-bg-secondary tw-p-4 max-lg:tw-w-[320px]"
+                >
+                    <p class="tw-mt-4 tw-text-gray-300">
+                        <b>VidDraft Saves Me Hours Every Week!</b>
+                        <br>
+                        <i>VidDraft has transformed the way I take notes on videos. 
+                            It's so easy to use and saves me tons of time.</i>
+                        <br>
+                    </p>
+
+                    <div class="tw-flex tw-place-items-center tw-gap-3">
+                        <div
+                            class="tw-h-[50px] tw-w-[50px] tw-overflow-hidden tw-rounded-full"
+                        >
+                            <img
+                                src="./assets/images/people/artificery.ba1049ef.jpeg"
+                                class="tw-h-full tw-w-full tw-object-cover"
+                                alt="man"
+                            />
+                        </div>
+                        <div class="tw-flex tw-flex-col tw-gap-1">
+                            <div class="tw-font-semibold">Ron</div>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="reveal-up tw-flex tw-h-fit tw-w-[350px] tw-break-inside-avoid tw-flex-col tw-gap-4 tw-rounded-lg tw-border-[1px] tw-border-outlineColor tw-bg-secondary tw-p-4 max-lg:tw-w-[320px]"
+                >
+                    <p class="tw-mt-4 tw-text-gray-300">
+                        <b>A Game-Changer for My Workflow</b>
+                        <br>
+                        <i>The timestamped notes feature is a lifesaver. I can find exactly what I need 
+                            without wasting time.</i>
+                        <br>
+                    </p>
+
+                    <div class="tw-flex tw-place-items-center tw-gap-3">
+                        <div
+                            class="tw-h-[50px] tw-w-[50px] tw-overflow-hidden tw-rounded-full"
+                        >
+                            <img
+                                src="./assets/images/people/yifan.d4b261ef.jpeg"
+                                class="tw-h-full tw-w-full tw-object-cover"
+                                alt="man"
+                            />
+                        </div>
+                        <div class="tw-flex tw-flex-col tw-gap-1">
+                            <div class="tw-font-semibold">Yifan Goh</div>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="reveal-up tw-flex tw-h-fit tw-w-[350px] tw-break-inside-avoid tw-flex-col tw-gap-4 tw-rounded-lg tw-border-[1px] tw-border-outlineColor tw-bg-secondary tw-p-4 max-lg:tw-w-[320px]"
+                >
+                    <p class="tw-mt-4 tw-text-gray-300">
+                        <b>Essential for Anyone Learning from Videos</b>
+                        <br>
+                        <i>VidDraft makes managing video notes so much easier. 
+                            It’s become an essential tool for my work.</i>
+                        <br>
+                    </p>
+
+                    <div class="tw-flex tw-place-items-center tw-gap-3">
+                        <div
+                            class="tw-h-[50px] tw-w-[50px] tw-overflow-hidden tw-rounded-full"
+                        >
+                            <img
+                                src="./assets/images/people/mateus.576bf51a.webp"
+                                class="tw-h-full tw-w-full tw-object-cover"
+                                alt="man"
+                            />
+                        </div>
+                        <div class="tw-flex tw-flex-col tw-gap-1">
+                            <div class="tw-font-semibold">Mateus De Nardo</div>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="reveal-up tw-flex tw-h-fit tw-w-[350px] tw-break-inside-avoid tw-flex-col tw-gap-4 tw-rounded-lg tw-border-[1px] tw-border-outlineColor tw-bg-secondary tw-p-4 max-lg:tw-w-[320px]"
+                >
+                    <p class="tw-mt-4 tw-text-gray-300">
+                        <b>Incredibly Simple, Yet Powerful</b>
+                        <br>
+                        <i>I love how easy it is to organize and edit my notes. 
+                            VidDraft keeps me productive and focused.</i>
+                        <br>
+                    </p>
+
+                    <div class="tw-flex tw-place-items-center tw-gap-3">
+                        <div
+                            class="tw-h-[50px] tw-w-[50px] tw-overflow-hidden tw-rounded-full"
+                        >
+                            <img
+                                src="./assets/images/people/naveen.311d3eb1.jpeg"
+                                class="tw-h-full tw-w-full tw-object-cover"
+                                alt="man"
+                            />
+                        </div>
+                        <div class="tw-flex tw-flex-col tw-gap-1">
+                            <div class="tw-font-semibold">Naveen</div>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="reveal-up tw-flex tw-h-fit tw-w-[350px] tw-break-inside-avoid tw-flex-col tw-gap-4 tw-rounded-lg tw-border-[1px] tw-border-outlineColor tw-bg-secondary tw-p-4 max-lg:tw-w-[320px]"
+                >
+                    <p class="tw-mt-4 tw-text-gray-300">
+                        <b>Perfect for My Research Needs</b>
+                        <br>
+                        <i>With VidDraft, I can quickly find and reference key moments in any video. It’s exactly what I needed.</i>
+                        <br>
+                    </p>
+
+                    <div class="tw-flex tw-place-items-center tw-gap-3">
+                        <div
+                            class="tw-h-[50px] tw-w-[50px] tw-overflow-hidden tw-rounded-full"
+                        >
+                            <img
+                                src="./assets/images/people/lennard.a8caddd5.jpeg"
+                                class="tw-h-full tw-w-full tw-object-cover"
+                                alt="man"
+                            />
+                        </div>
+                        <div class="tw-flex tw-flex-col tw-gap-1">
+                            <div class="tw-font-semibold">Lennard</div>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="reveal-up tw-flex tw-h-fit tw-w-[350px] tw-break-inside-avoid tw-flex-col tw-gap-4 tw-rounded-lg tw-border-[1px] tw-border-outlineColor tw-bg-secondary tw-p-4 max-lg:tw-w-[320px]"
+                >
+                    <p class="tw-mt-4 tw-text-gray-300">
+                        <b>A Must-Have Tool for Video Learning</b>
+                        <br>
+                        <i>VidDraft has streamlined my research process. I can’t imagine going back to the old way of taking notes.</i>
+                    </p>
+
+                    <div class="tw-flex tw-place-items-center tw-gap-3">
+                        <div
+                            class="tw-h-[50px] tw-w-[50px] tw-overflow-hidden tw-rounded-full"
+                        >
+                            <img
+                                src="./assets/images/people/dunsin.c7d35d82.jpeg"
+                                class="tw-h-full tw-w-full tw-object-cover"
+                                alt="man"
+                            />
+                        </div>
+                        <div class="tw-flex tw-flex-col tw-gap-1">
+                            <div class="tw-font-semibold">Dunsin</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section
+            class="tw-mt-5 tw-flex tw-w-full tw-flex-col tw-place-items-center tw-p-[2%]"
+            id="pricing"
+        >
+            <h3
+                class="tw-text-3xl tw-font-medium tw-text-gray-300 max-md:tw-text-2xl"
+            >
+                Pay Once, Use Forever!
+            </h3>
+            <!-- pricing -->
+            <div
+                class="tw-mt-10 tw-flex tw-flex-wrap tw-place-content-center tw-gap-8 max-lg:tw-flex-col"
+            >
+                <div
+                    class="reveal-up tw-flex tw-w-[380px] tw-flex-col tw-place-items-center tw-gap-2 tw-rounded-lg tw-border-[1px] tw-border-outlineColor tw-bg-secondary tw-p-8 tw-shadow-xl max-lg:tw-w-[320px]"
+                >
+                    <h3 class="">
+                        <span class="tw-text-5xl tw-font-semibold">$9</span>
+                    </h3>
+                    <p class="tw-mt-3 tw-text-center tw-text-gray-300">
+                        <b>Basic Plan</b>
+                    </p>
+                    <hr />
+                    <ul
+                        class="tw-mt-4 tw-flex tw-flex-col tw-gap-2 tw-text-center tw-text-lg tw-text-gray-200"
+                    >
+                        <li>Unlimited note-taking</li>
+                        <li>Basic organization features</li>
+                        <li>Video search by ID</li>
+                    </ul>
+                    <a
+                        href="https://www.paypal.com/ncp/payment/AU887D4BJRS9L"
+                        class="btn tw-mt-8 !tw-w-full tw-transition-transform tw-duration-[0.3s] hover:tw-scale-x-[1.02]"
+                    >
+                    Get Basic
+                    </a>
+                </div>
+                <div
+                    class="reveal-up tw-flex tw-w-[380px] tw-flex-col tw-place-items-center tw-gap-2 tw-rounded-lg tw-border-2 tw-border-primary tw-bg-secondary tw-p-8 tw-shadow-xl max-lg:tw-w-[320px]"
+                >
+                    <h3 class="">
+                        <span class="tw-text-5xl tw-font-semibold">$19</span>
+                    </h3>
+                    <p class="tw-mt-3 tw-text-center tw-text-gray-300">
+                        <b>Pro Plan</b>
+                    </p>
+                    <hr />
+                    <ul
+                        class="tw-mt-4 tw-flex tw-flex-col tw-gap-2 tw-text-center tw-text-lg tw-text-gray-200"
+                    >
+                        <li>Everything in Basic</li>
+                        <li>Advanced note organization</li>
+                        <li>Priority support</li>
+                    </ul>
+                    <a
+                        href="https://www.paypal.com/ncp/payment/AU887D4BJRS9L"
+                        class="btn tw-mt-8 !tw-w-full tw-transition-transform tw-duration-[0.3s] hover:tw-scale-x-[1.02]"
+                    >
+                    Get Pro
+                    </a>
+                </div>
+                <div
+                    class="reveal-up tw-flex tw-w-[380px] tw-flex-col tw-place-items-center tw-gap-2 tw-rounded-lg tw-border-[1px] tw-border-outlineColor tw-bg-secondary tw-p-8 tw-shadow-xl max-lg:tw-w-[320px]"
+                >
+                    <h3 class="">
+                        <span class="tw-text-5xl tw-font-semibold">$39</span>
+                    </h3>
+                    <p class="tw-mt-3 tw-text-center tw-text-gray-300">
+                        <b>Lifetime Plan</b>
+                    </p>
+                    <hr />
+                    <ul
+                        class="tw-mt-4 tw-flex tw-flex-col tw-gap-2 tw-text-center tw-text-lg tw-text-gray-200"
+                    >
+                        <li>All Pro features</li>
+                        <li>Lifetime updates</li>
+                        <li>Premium support</li>
+                    </ul>
+                    <a
+                        href="https://www.paypal.com/ncp/payment/AU887D4BJRS9L"
+                        class="btn tw-mt-8 !tw-w-full tw-transition-transform tw-duration-[0.3s] hover:tw-scale-x-[1.02]"
+                    >
+                    Get Lifetime
+                    </a>
+                </div>
+            </div>
+        </section>
+
+
+        <section
+            class="tw-flex tw-w-full tw-flex-col tw-place-content-center tw-place-items-center tw-gap-[10%] tw-p-[5%] tw-px-[10%]"
+            id="faq"
+        >
+            <h3
+                class="tw-text-4xl tw-font-medium tw-text-gray-300 max-md:tw-text-2xl"
+            >
+            Frequently Asked Questions
+            </h3>
+            <div
+                class="tw-mt-5 tw-flex tw-min-h-[300px] tw-w-full tw-max-w-[850px] tw-flex-col tw-gap-4"
+            >
+                <div
+                    class="faq tw-w-full tw-rounded-md tw-border-[1px] tw-border-solid tw-border-[#1F2123] tw-bg-[#080808]"
+                >
+                    <div
+                        class="faq-accordion tw-flex tw-w-full tw-select-none tw-text-xl max-md:tw-text-lg"
+                    >
+                        <span>What is VidDraft?</span>
+                        <i class="bi bi-plus tw-ml-auto tw-font-semibold"></i>
+                    </div>
+                    <div class="content">
+                        VidDraft is a powerful app that lets you search for YouTube videos, 
+                        take timestamped notes while watching, and organize your notes seamlessly. 
+                        It’s perfect for capturing key points and ideas from videos.
+                    </div>
+                </div>
+
+                <div
+                    class="faq tw-w-full tw-rounded-md tw-border-[1px] tw-border-solid tw-border-[#1F2123] tw-bg-[#080808]"
+                >
+                    <div
+                        class="faq-accordion tw-flex tw-w-full tw-select-none tw-text-xl max-md:tw-text-lg"
+                    >
+                        <span>How does VidDraft work?</span>
+                        <i class="bi bi-plus tw-ml-auto tw-font-semibold"></i>
+                    </div>
+                    <div class="content">
+                        <li><b>Search Videos:</b> Use the search bar to find YouTube videos by video ID.</li>
+                        <li><b>Watch and Take Notes:</b> Play the video and take notes simultaneously. Your notes are automatically timestamped.</li>
+                        <li><b>Manage Notes:</b> View, edit, and organize your notes easily.</li>
+                    </div>
+                </div>
+
+                <div class="faq tw-w-full tw-rounded-md tw-border-[1px] tw-border-solid tw-border-[#1F2123] tw-bg-[#080808]"
+            >
+                <div
+                    class="faq-accordion tw-flex tw-w-full tw-select-none tw-text-xl max-md:tw-text-lg"
+                >
+                    <span>Why should I use VidDraft?</span>
+                    <i class="bi bi-plus tw-ml-auto tw-font-semibold"></i>
+                </div>
+                <div class="content">
+                    <li><b>Save Time:</b> Organize and manage your video notes efficiently.</li>
+                    <li><b>User-Friendly:</b> Easy to use for everyone.</li>
+                    <li><b>Boost Productivity:</b> Quickly find and reference key moments from videos.</li>
+                </div>
+            </div>
+            <div
+                class="faq tw-w-full tw-rounded-md tw-border-[1px] tw-border-solid tw-border-[#1F2123] tw-bg-[#080808]"
+            >
+                <div
+                    class="faq-accordion tw-flex tw-w-full tw-select-none tw-text-xl max-md:tw-text-lg"
+                >
+                    <span>What features does VidDraft offer?</span>
+                    <i class="bi bi-plus tw-ml-auto tw-font-semibold"></i>
+                </div>
+                <div class="content">
+                    <li><b>Video Integration:</b> Search for and play YouTube videos using video IDs.</li>
+                    <li><b>Timestamped Note Taking:</b> Notes are automatically timestamped.</li>
+                    <li><b>Organized Storage:</b> Save and categorize your notes by video.</li>
+                    <li><b>Edit Notes Anytime:</b> Edit or delete your notes whenever needed.</li>
+                </div>
+            </div>
+
+            <div
+                class="faq tw-w-full tw-rounded-md tw-border-[1px] tw-border-solid tw-border-[#1F2123] tw-bg-[#080808]"
+            >
+                
+                <div
+                    class="faq-accordion tw-flex tw-w-full tw-select-none tw-text-xl max-md:tw-text-lg"
+                >
+                    <span>Can I use VidDraft on multiple devices?</span>
+                    <i class="bi bi-plus tw-ml-auto tw-font-semibold"></i>
+                </div>
+                <div class="content">
+                    Absolutely! Access and manage your notes from any device.
+                </div>
+            </div>
+
+            <div
+            class="faq tw-w-full tw-rounded-md tw-border-[1px] tw-border-solid tw-border-[#1F2123] tw-bg-[#080808]"
+        >
+            
+            <div
+                class="faq-accordion tw-flex tw-w-full tw-select-none tw-text-xl max-md:tw-text-lg"
+            >
+                <span>What if I need help using VidDraft?</span>
+                <i class="bi bi-plus tw-ml-auto tw-font-semibold"></i>
+            </div>
+            <div class="content">
+                We provide priority support, especially for our paid plan users. Contact us anytime for assistance.
+            </div>
+        </div>
+        
+        <div
+        class="faq tw-w-full tw-rounded-md tw-border-[1px] tw-border-solid tw-border-[#1F2123] tw-bg-[#080808]"
+    >
+        
+        <div
+            class="faq-accordion tw-flex tw-w-full tw-select-none tw-text-xl max-md:tw-text-lg"
+        >
+            <span>What happens after I purchase?</span>
+            <i class="bi bi-plus tw-ml-auto tw-font-semibold"></i>
+        </div>
+        <div class="content">
+            After purchasing, you’ll receive instant access to all features of your selected plan. Start taking and managing your video notes right away!
+        </div>
+    </div>
+        
+    <div
+    class="faq tw-w-full tw-rounded-md tw-border-[1px] tw-border-solid tw-border-[#1F2123] tw-bg-[#080808]"
+>
+    
+    <div
+        class="faq-accordion tw-flex tw-w-full tw-select-none tw-text-xl max-md:tw-text-lg"
+    >
+        <span>Can I upgrade my plan later?</span>
+        <i class="bi bi-plus tw-ml-auto tw-font-semibold"></i>
+    </div>
+    <div class="content">
+        Absolutely! You can upgrade to a higher plan at any time, only paying the difference in price.
+    </div>
+</div>
+
+            <div
+                class="faq tw-w-full tw-rounded-md tw-border-[1px] tw-border-solid tw-border-[#1F2123] tw-bg-[#080808]"
+            >
+
+                <div
+                    class="faq-accordion tw-flex tw-w-full tw-select-none tw-text-xl max-md:tw-text-lg"
+                >
+                    <span>Is my data secure with VidDraft?</span>
+                    <i class="bi bi-plus tw-ml-auto tw-font-semibold"></i>
+                </div>
+                <div class="content">
+                    Yes, your data is secure with cloud backup and two-factor authentication.
+                </div>
+            </div>
+        </div>
+
+        <div
+            class="tw-mt-20 tw-flex tw-flex-col tw-place-items-center tw-gap-4"
+        >
+            <div class="tw-text-3xl max-md:tw-text-2xl">
+                Still have questions?
+            </div>
+            <a
+                href="mailto:techiralthefuture@gmail.com"
+                class="btn !tw-rounded-full !tw-border-[1px] !tw-border-solid !tw-border-gray-300 !tw-bg-transparent tw-transition-colors tw-duration-[0.3s]"
+            >
+                Contact
+            </a>
+        </div>
+    </section>
+
+        <!--<section
+            class="tw-flex tw-w-full tw-flex-col tw-place-content-center tw-place-items-center tw-gap-[10%] tw-p-[5%] tw-px-[10%] max-md:tw-px-2"
+        >
+            <div
+                class="tw-flex tw-w-full tw-max-w-[80%] tw-place-content-center tw-place-items-center tw-justify-between tw-gap-3 tw-rounded-lg tw-border-[1px] tw-border-outlineColor tw-bg-secondary tw-p-6 max-md:tw-max-w-full max-md:tw-flex-col"
+            >
+                <div class="tw-flex tw-flex-col tw-gap-1">
+                    <h2 class="tw-text-3xl tw-text-gray-300 max-md:tw-text-xl">
+                        Join our newsletter
+                    </h2>
+                    <div class="tw-text-gray-300">Stay updated with the latest features, tips, and offers from VidDraft.</div>
+                </div>
+
+                <div
+                    class="tw-flex tw-h-[60px] tw-place-items-center tw-gap-2 tw-overflow-hidden tw-p-2"
+                >
+                    <input
+                        type="email"
+                        class="input tw-h-full tw-w-full !tw-border-gray-600 tw-p-2 tw-outline-none"
+                        placeholder="email"
+                    />
+                    <a
+                        class="btn !tw-rounded-full !tw-border-[1px] !tw-border-solid !tw-border-gray-300 !tw-bg-transparent tw-transition-colors tw-duration-[0.3s]"
+                        href=""
+                    >
+                        Signup
+                    </a>
+                </div>
+            </div>
+        </section>-->
+
+        <footer
+            class="tw-mt-auto tw-flex tw-w-full tw-place-content-around tw-gap-3 tw-p-[5%] tw-px-[10%] tw-text-white max-md:tw-flex-col"
+            id="company"
+        >
+            <div
+                class="tw-flex tw-h-full tw-w-[250px] tw-flex-col tw-place-items-center tw-gap-6 max-md:tw-w-full"
+            >
+                <img
+                    src="./assets/logo/viddraft-bg (1).png"
+                    alt="logo"
+                    srcset=""
+                    class="tw-max-w-[120px]"
+                />
+                <div>
+                    <b>Techiral, Inc.</b>
+                    <br>
+                    <p>Copyright © 2024 - All rights reserved</p>
+                </div>
+                <div class="tw-mt-3 tw-text-lg tw-font-semibold">Follow us</div>
+                <div class="tw-flex tw-gap-4 tw-text-2xl">
+                    <a href="https://www.youtube.com/channel/UCeF9ebS8qOwg6DTDyI_kExw?sub_confirmation=1" aria-label="Facebook">
+                        <i class="bi bi-youtube"></i>
+                    </a>
+                    <a
+                        href="https://twitter.com/techiral_"
+                        aria-label="Twitter"
+                    >
+                        <i class="bi bi-twitter"></i>
+                    </a>
+                    <a
+                        href="https://www.instagram.com/techiral_the_future/"
+                        class="tw-h-[40px] tw-w-[40px]"
+                        aria-label="Instagram"
+                    >
+                        <i class="bi bi-instagram"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="tw-flex tw-h-full tw-w-[250px] tw-flex-col tw-gap-4">
+                <h2 class="tw-text-3xl max-md:tw-text-xl">Techiral</h2>
+                <div class="tw-flex tw-flex-col tw-gap-3 max-md:tw-text-sm">
+                    <a href="https://medium.com/@techiral" class="footer-link">Blogs</a>
+                    <a href="mailto:techiralthefuture@gmail.com" class="footer-link">Contact</a>
+                </div>
+            </div>
+
+            <div class="tw-flex tw-h-full tw-w-[250px] tw-flex-col tw-gap-4">
+                <h2 class="tw-text-3xl max-md:tw-text-xl">Resources</h2>
+                <div class="tw-flex tw-flex-col tw-gap-3 max-md:tw-text-sm">
+                    <a href="#about-us" class="footer-link">About us</a>
+                    <a href="#faq" class="footer-link">FAQ</a>
+                    <a href="mailto:techiralthefuture@gmail.com" class="footer-link">Contact Us</a>
+                    <a href="https://medium.com/@techiral" class="footer-link">Blogs</a>
+                </div>
+            </div>
+        </footer>
+    </body>
+
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.0/gsap.min.js"
+        integrity="sha512-B1lby8cGcAUU3GR+Fd809/ZxgHbfwJMp0jLTVfHiArTuUt++VqSlJpaJvhNtRf3NERaxDNmmxkdx2o+aHd4bvw=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+    ></script>
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.0/ScrollTrigger.min.js"
+        integrity="sha512-AY2+JxnBETJ0wcXnLPCcZJIJx0eimyhz3OJ55k2Jx4RtYC+XdIi2VtJQ+tP3BaTst4otlGG1TtPJ9fKrAUnRdQ=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+    ></script>
+
+    <script src="./index.js"></script>
+</html>
