@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: 
+
+Sitemap: https://viddraft.vercel.app/sitemap.xml
