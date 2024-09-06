@@ -1,3 +1,3 @@
 User-agent: *
-Disallow: 
+Disallow:
 Sitemap: https://viddraft.vercel.app/sitemap.xml
